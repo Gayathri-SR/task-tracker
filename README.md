@@ -1,2 +1,16 @@
-# task-tracker
-Creating this repo to build a simple task tracker to apply the basic React foundations that were learnt
+Task Tracker
+-----------------
+Features:
+----------
+Add task
+Mark complete
+Delete task
+
+Concepts used:
+---------------
+Components
+Props
+State
+Events
+List rendering
+Keys
