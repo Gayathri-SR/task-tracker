@@ -2,7 +2,9 @@ function TaskItem({task, toggleTask}) {
     return(
         <div>
             <input type="checkbox" checked={task.completed} onChange={() => toggleTask(task.id)} />
-            <div>
+            <div style={{
+                textDecoration: task.completed? "line-through" : "none"
+            }}>
                 {task.title}
             </div>
         </div>
