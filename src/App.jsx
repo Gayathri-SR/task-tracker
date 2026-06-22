@@ -36,13 +36,21 @@ function App() {
     ]);
   }
 
+  function deleteTask(id) {
+    const updatedTasks = tasks.filter(
+      task => task.id != id
+    );
+
+    setTasks(updatedTasks);
+  }
+
   const completedCount = tasks.filter(task => task.completed).length;
 
   return (
     <>
       <h1>Task Tracker</h1>
       <h2>Completed : {completedCount}/{tasks.length}</h2>
-      <TaskList tasks={tasks} toggleTask={toggleTask} />
+      <TaskList tasks={tasks} toggleTask={toggleTask} deleteTask={deleteTask} />
       <button onClick={() => setTasks([])}>Clear Tasks</button>
       <TaskInput addTask={addTask} />
     </>

@@ -1,4 +1,4 @@
-function TaskItem({task, toggleTask}) {
+function TaskItem({task, toggleTask, deleteTask}) {
     return(
         <div>
             <input type="checkbox" checked={task.completed} onChange={() => toggleTask(task.id)} />
@@ -7,6 +7,7 @@ function TaskItem({task, toggleTask}) {
             }}>
                 {task.title}
             </div>
+            <button onClick={()=>deleteTask(task.id)}>Delete</button>
         </div>
     );
 }
